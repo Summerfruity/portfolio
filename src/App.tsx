@@ -149,6 +149,7 @@ export default function App() {
             <p className="hero-role">{t(profile.role)}</p>
             <div className="hero-focus" aria-label={say('研究方向', 'Research focus')}>
               <span className="focus-label">{say('研究方向', 'FOCUS')}</span>
+              <h2 className="hero-focus-title">{say('图形学渲染 · GPU 加速 · CUDA 并行计算', 'RENDERING · GPU ACCELERATION · CUDA PARALLELISM')}</h2>
               <div>
                 {profile.researchInterests.map((interest) => <span key={interest.en}>{t(interest)}</span>)}
               </div>

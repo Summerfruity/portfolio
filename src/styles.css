@@ -250,9 +250,9 @@ dd {
 .hero h1 {
   display: flex;
   align-items: flex-end;
-  gap: 20px;
-  margin-top: 30px;
-  font-size: clamp(44px, 4vw, 58px);
+  gap: 14px;
+  margin-top: 25px;
+  font-size: clamp(32px, 3.4vw, 48px);
   font-weight: 800;
   line-height: .85;
   letter-spacing: -.09em;
@@ -264,9 +264,9 @@ dd {
 }
 
 .hero h1 small {
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: .12em;
@@ -279,54 +279,66 @@ html[lang="zh-CN"] .hero h1 {
 
 .hero-role {
   width: fit-content;
-  margin-top: 27px;
-  padding: 8px 11px;
-  color: var(--black);
-  background: var(--cyan);
-  border: 2px solid var(--cyan);
-  font-size: 12px;
+  margin-top: 25px;
+  padding: 2px 0 2px 15px;
+  color: var(--cyan);
+  background: transparent;
+  border: 0;
+  border-left: 4px solid var(--cyan);
+  font-size: clamp(20px, 2.15vw, 30px);
+  line-height: 1.2;
   font-weight: 900;
-  letter-spacing: .04em;
+  letter-spacing: -.04em;
 }
 
 .hero-focus {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 9px;
-  margin-top: 16px;
+  display: block;
+  margin-top: 22px;
 }
 
 .focus-label {
+  display: block;
+  margin-bottom: 10px;
   color: #828a8d;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: .11em;
+}
+
+.hero-focus-title {
+  max-width: 610px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: clamp(25px, 3.3vw, 46px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.045em;
 }
 
 .hero-focus > div {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  margin-top: 13px;
 }
 
 .hero-focus > div > span {
-  padding: 5px 7px;
+  padding: 7px 9px;
   color: var(--lime);
   background: #172019;
   border: 1px solid #415b2c;
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 800;
   letter-spacing: .04em;
 }
 
 .hero-description {
-  max-width: 520px;
-  margin-top: 21px;
-  color: #b4bab9;
+  max-width: 600px;
+  margin-top: 25px;
+  color: #e1e5e1;
   font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
-  font-size: 15px;
-  line-height: 1.9;
+  font-size: 17px;
+  line-height: 1.85;
 }
 
 .hero-actions {
@@ -1012,11 +1024,11 @@ html[lang="zh-CN"] .hero h1 {
   .hero h1 {
     gap: 12px;
     margin-top: 25px;
-    font-size: clamp(40px, 12vw, 48px);
+    font-size: clamp(30px, 10vw, 38px);
   }
 
   html[lang="zh-CN"] .hero h1 {
-    font-size: clamp(42px, 13vw, 50px);
+    font-size: clamp(32px, 11vw, 40px);
   }
 
   .hero h1 small {
@@ -1026,11 +1038,20 @@ html[lang="zh-CN"] .hero h1 {
 
   .hero-role {
     margin-top: 22px;
-    font-size: 10px;
+    padding-left: 12px;
+    font-size: 19px;
+  }
+
+  .hero-focus {
+    margin-top: 19px;
+  }
+
+  .hero-focus-title {
+    font-size: clamp(25px, 8vw, 31px);
   }
 
   .hero-description {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .hero-actions {
@@ -1195,11 +1216,11 @@ html[lang="zh-CN"] .hero h1 {
 
 @media (max-width: 380px) {
   .hero h1 {
-    font-size: 42px;
+    font-size: 32px;
   }
 
   html[lang="zh-CN"] .hero h1 {
-    font-size: 44px;
+    font-size: 34px;
   }
 
   .project-copy h3 {
