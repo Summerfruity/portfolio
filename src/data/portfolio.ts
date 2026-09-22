@@ -85,7 +85,7 @@ export const projects: Project[] = [
       zh: '基于 Reynolds 群集规则实现聚合、分离和对齐，通过 CUDA/OpenGL 互操作直接更新可视化缓冲。项目实现了全对搜索、散列均匀网格和内存连续网格三条更新路径，并用 CUDA Event 记录性能。',
       en: 'Implements Reynolds cohesion, separation, and alignment rules with CUDA/OpenGL interoperability. The project compares an all-pairs baseline, a scattered uniform grid, and a coherent grid measured with CUDA events.',
     },
-    image: '/projects/cuda-flocking.jpg',
+    image: '/projects/cuda-flocking.gif',
     imageAlt: {
       zh: 'CUDA Flocking 运行画面，大量彩色 Boids 在黑色背景中形成群集',
       en: 'CUDA Flocking runtime showing thousands of colored boids against a black background',

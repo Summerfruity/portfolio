@@ -591,8 +591,9 @@ html[lang="zh-CN"] .hero h1 {
 
 .project-visual img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
   background: var(--black);
 }
 
