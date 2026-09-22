@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+  <title id="title">CUDA stream compaction pipeline</title>
+  <desc id="desc">An input array is mapped, scanned, and scattered into a compact output array.</desc>
+  <rect width="960" height="600" fill="#08090c"/>
+  <g stroke="#202630" stroke-width="1" opacity=".8">
+    <path d="M0 50h960M0 100h960M0 150h960M0 200h960M0 250h960M0 300h960M0 350h960M0 400h960M0 450h960M0 500h960M0 550h960"/>
+    <path d="M60 0v600M120 0v600M180 0v600M240 0v600M300 0v600M360 0v600M420 0v600M480 0v600M540 0v600M600 0v600M660 0v600M720 0v600M780 0v600M840 0v600M900 0v600"/>
+  </g>
+  <g font-family="Consolas, monospace">
+    <text x="54" y="58" fill="#b8f34b" font-size="18" font-weight="700">&gt; COMPACT.EXE --MODE GPU</text>
+    <text x="906" y="58" fill="#69717a" font-size="13" text-anchor="end">CUDA / BLELLOCH</text>
+
+    <text x="54" y="120" fill="#8d959d" font-size="13">INPUT[N]</text>
+    <g font-size="24" text-anchor="middle">
+      <g fill="#151922" stroke="#69717a" stroke-width="2">
+        <rect x="54" y="140" width="82" height="62"/><rect x="144" y="140" width="82" height="62"/>
+        <rect x="234" y="140" width="82" height="62"/><rect x="324" y="140" width="82" height="62"/>
+        <rect x="414" y="140" width="82" height="62"/><rect x="504" y="140" width="82" height="62"/>
+        <rect x="594" y="140" width="82" height="62"/><rect x="684" y="140" width="82" height="62"/>
+      </g>
+      <g fill="#f3f0e7">
+        <text x="95" y="180">3</text><text x="185" y="180" fill="#596169">0</text>
+        <text x="275" y="180">5</text><text x="365" y="180" fill="#596169">0</text>
+        <text x="455" y="180">8</text><text x="545" y="180">2</text>
+        <text x="635" y="180" fill="#596169">0</text><text x="725" y="180">4</text>
+      </g>
+    </g>
+    <text x="797" y="177" fill="#67d9f0" font-size="15">N = 1,048,576</text>
+
+    <path d="M95 221v46h720" fill="none" stroke="#b8f34b" stroke-width="3"/>
+    <path d="m807 259 14 8-14 8z" fill="#b8f34b"/>
+    <text x="113" y="253" fill="#b8f34b" font-size="13">MAP → EXCLUSIVE_SCAN → SCATTER</text>
+
+    <text x="54" y="326" fill="#8d959d" font-size="13">MAP[x != 0]</text>
+    <text x="54" y="370" fill="#67d9f0" font-size="22">1  0  1  0  1  1  0  1</text>
+    <text x="481" y="326" fill="#8d959d" font-size="13">EXCLUSIVE_SCAN</text>
+    <text x="481" y="370" fill="#ff9b62" font-size="22">0  1  1  2  2  3  4  4</text>
+
+    <text x="54" y="437" fill="#8d959d" font-size="13">OUTPUT[5]</text>
+    <g font-size="25" text-anchor="middle">
+      <g fill="#b8f34b" stroke="#b8f34b" stroke-width="2">
+        <rect x="54" y="458" width="100" height="68"/><rect x="164" y="458" width="100" height="68"/>
+        <rect x="274" y="458" width="100" height="68"/><rect x="384" y="458" width="100" height="68"/>
+        <rect x="494" y="458" width="100" height="68"/>
+      </g>
+      <g fill="#08090c" font-weight="700">
+        <text x="104" y="501">3</text><text x="214" y="501">5</text><text x="324" y="501">8</text>
+        <text x="434" y="501">2</text><text x="544" y="501">4</text>
+      </g>
+    </g>
+    <text x="906" y="490" fill="#b8f34b" font-size="17" text-anchor="end">COMPACT: 0.72ms</text>
+    <text x="906" y="518" fill="#737b82" font-size="12" text-anchor="end">ORDER PRESERVED / ZEROES REMOVED</text>
+    <text x="54" y="565" fill="#525a63" font-size="12">STATUS: PASS</text>
+    <text x="906" y="565" fill="#525a63" font-size="12" text-anchor="end">CPU / NAIVE / EFFICIENT / THRUST</text>
+  </g>
+</svg>
